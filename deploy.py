@@ -25,3 +25,5 @@ shutil.copy(f"deploy/{new_env}/model.pkl", "deploy/prod/model.pkl")
 open(env_file, "w").write(new_env)
 print(f"PRODUCTION NOW: {new_env}")
 print("=== DEPLOY DONE ===")
+
+# test
