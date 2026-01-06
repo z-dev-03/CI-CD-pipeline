@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                bat 'c:\Users\admin\AppData\Local\Programs\Python\Python312\python.exe -m pip install -r requirements.txt'
+                bat 'python pip install -r requirements.txt'
             }
         }
         stage('Build & Test') {
             steps {
-                bat 'c:\Users\admin\AppData\Local\Programs\Python\Python312\python.exe ml_pipeline.py'
+                bat 'python ml_pipeline.py'
             }
         }
         stage('Deploy') {
             steps {
-                bat 'c:\Users\admin\AppData\Local\Programs\Python\Python312\python.exe deploy.py'
+                bat 'python deploy.py'
             }
         }
     }
